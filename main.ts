@@ -46,6 +46,22 @@ console.log("The first 100 prime numbers are:")
 console.log(getFirstPrimes(100).join(", "))
 
 // 2. Factorial
+
+function factorial(n: number): number {
+  /*
+  se debe iterar n y luego multiplicar entre ellos 
+  */
+ let numObj: number = 1
+ for(let i = 1; i <= n; i++) {
+  console.log(numObj)   
+  numObj = numObj * i 
+ }
+ return numObj
+}
+
+console.log(factorial(5))
+
+
 // 3. Palindroma
 // 4. Calculate Area
 // 5. Fibonacci
