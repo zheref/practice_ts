@@ -134,13 +134,13 @@ console.log(fibonacci3(100).join(", "))
 
 
 
-// 1. Algoritmia Matematica
-// 2. Algoritmia con Strings
-// 3. Orientacion a Objetos
-// 4. Algoritmia con Orientacion a Objetos
-// 5. Patrones con Orientacion a Objetos
-// 6. SOLID con Orientacion a Objetos
-// 7. Programacion Funcional (Principios)
-// 8. Algoritmia con Programacion Funcional
-// 9. Mejores practicas con Programacion Funcional
-// 10. Programacion Asincronica
+// 1. Algoritmia Matematica (semana 1)
+// 2. Algoritmia con Strings, Arrays y Objetos (semana 1)
+// 3. Orientacion a Objetos (semana 2)
+// 4. Algoritmia con Orientacion a Objetos (semana 2)
+// 5. Patrones con Orientacion a Objetos (semana 3)
+// 6. SOLID con Orientacion a Objetos (semana 3)
+// 7. Programacion Funcional (Principios) (semana 4)
+// 8. Algoritmia con Programacion Funcional (semana 4)
+// 9. Mejores practicas con Programacion Funcional (semana 5)
+// 10. Programacion Asincronica (semana 5)
