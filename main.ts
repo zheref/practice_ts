@@ -199,3 +199,18 @@ console.log("Are anagrams?")
 console.log(areAnagrams("earth", "heart"))
 console.log(areAnagrams("arm", "rama"))
 console.log(areAnagrams("roma", "ramo"))
+
+// Order is NOT relevant
+function union(set1: number[], set2: number[]): number[] {
+  // Union: [1, 2, 3] U [6, 5, 4] = [1, 2, 3, 6, 5, 4]
+  // Union: [3, 4, 5] U [7, 3, 9] = [3, 4, 5, 7, 9]
+
+  // Resolve
+}
+
+function intersection(set1: number[], set2: number[]): number[] {
+  // Intersection: [1, 2, 3] I [6, 5, 4] = []
+  // Intersection: [3, 4, 5] I [7, 3, 9] = [3]
+
+  // Resolve
+}

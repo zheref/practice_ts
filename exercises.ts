@@ -35,7 +35,7 @@ function numbersSequence(step: number, limit: number): number[] {
 
 // 7. Anagramas
 
-// 8. Conjuntos
+// 8. Conjuntos: Union and Intersection
 
 // 9. Contando Palabras
 /*
