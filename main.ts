@@ -146,11 +146,11 @@ console.log(fibonacci3(100).join(", "))
 // 10. Programacion Asincronica (semana 5)
 
 function isArmstrong(n: number): boolean {
-  const nStr = `${n}`
+  const nStr: string = `${n}`
 
   let accumulator = 0
   for (let i = 0; i < nStr.length; i++) {
-    const digit = nStr.charAt(i)
+    const digit: string = nStr.charAt(i)
     const digitNum = parseInt(digit, 10)
     const digitPower = Math.pow(digitNum, nStr.length)
     accumulator += digitPower
@@ -161,5 +161,41 @@ function isArmstrong(n: number): boolean {
   } else { return false }
 }
 
+// Simplified version
+function isArmstrong2(n: number): boolean {
+  const nStr: string = `${n}`
+  let accumulator = 0
+  for (let i = 0; i < nStr.length; i++) {
+    accumulator += Math.pow(parseInt(nStr.charAt(i), 10), nStr.length)
+  }
+  return accumulator == n
+}
+
+// TODO: Write functional version
+// 1. No loops
+// 2. Use reduce instead of accumulation
+// 3. Never mutate anything
+
 console.log("Is Armstrong?")
 console.log(isArmstrong(372))
+
+function areAnagrams(word1: string, word2: string): boolean {
+  // true: Earth = Heart
+  // true: Silent = Listen
+  // false: Visa != Savvy
+  // false: Arm != Rama
+
+  if (word1.length != word2.length) {
+    return false
+  }
+
+  const characters1 = word1.split("").sort()
+  const characters2 = word2.split("").sort()
+
+  return characters1.join("") == characters2.join("")
+}
+
+console.log("Are anagrams?")
+console.log(areAnagrams("earth", "heart"))
+console.log(areAnagrams("arm", "rama"))
+console.log(areAnagrams("roma", "ramo"))
