@@ -144,3 +144,22 @@ console.log(fibonacci3(100).join(", "))
 // 8. Algoritmia con Programacion Funcional (semana 4)
 // 9. Mejores practicas con Programacion Funcional (semana 5)
 // 10. Programacion Asincronica (semana 5)
+
+function isArmstrong(n: number): boolean {
+  const nStr = `${n}`
+
+  let accumulator = 0
+  for (let i = 0; i < nStr.length; i++) {
+    const digit = nStr.charAt(i)
+    const digitNum = parseInt(digit, 10)
+    const digitPower = Math.pow(digitNum, nStr.length)
+    accumulator += digitPower
+  }
+
+  if (accumulator == n) {
+    return true
+  } else { return false }
+}
+
+console.log("Is Armstrong?")
+console.log(isArmstrong(372))
