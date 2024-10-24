@@ -24,16 +24,16 @@ function numbersSequence(step: number, limit: number): number[] {
 //factorial(10) // 3628800
 //factorial(15) // 1307674368000
 
-// 4. Escribir funcion que calcule la cantidad de segundos, dada una cantidad de dias, horas y minutos
+// [Revisar] 4. Escribir funcion que calcule la cantidad de segundos, dada una cantidad de dias, horas y minutos
 
 // 5. Escribir funcion que dado un array con numeros, retornar un array donde no exista ningun numero primo
 
 // Para siguiente clase
 // Temas: Cadenas, arrays, recomposicion.
 
-// 6. Numero de Armstrong
+// [x] 6. Numero de Armstrong
 
-// 7. Anagramas
+// [x] 7. Anagramas
 
 // 8. Conjuntos: Union and Intersection
 
