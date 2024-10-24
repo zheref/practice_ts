@@ -1,7 +1,7 @@
 // Ejercicios
 // Solucionar despues de cada linea de ejercicio
 
-// 1. Escribir el cuerpo de la siguiente funcion de manera que entregue una secuencia de numeros con saltos y limite segun se indique
+// [x] 1. Escribir el cuerpo de la siguiente funcion de manera que entregue una secuencia de numeros con saltos y limite segun se indique
 function numbersSequence(step: number, limit: number): number[] {
     // Write here
 }
