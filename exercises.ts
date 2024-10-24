@@ -11,13 +11,13 @@ function numbersSequence(step: number, limit: number): number[] {
 //numbersSequence(2, 10) // [2, 4, 6, 8, 10]
 //numbersSequence(3, 20) // [3, 6, 9, 12, 15, 18]
 
-// 2. Escribir funcion que calcule raiz cuadrada del valor absoluto de un numero dado
+// [x] 2. Escribir funcion que calcule raiz cuadrada del valor absoluto de un numero dado
 //sqtabs(10) // 3.16227766
 //sqtabs(-10) // 3.16227766
 //sqtabs(-49) // 7
 //sqtabs(64) // 8
 
-// 3. Escribir una function que calcule el factorial de un numero, de forma funcional
+// [x] 3. Escribir una function que calcule el factorial de un numero, de forma funcional
 
 // Expectativas
 //factorial(6) // 720
