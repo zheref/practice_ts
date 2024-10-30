@@ -243,7 +243,42 @@ expect(isPalindrome("1234567890")).toBeFalse()
 // pero comienza con los números 2 y 1 en lugar de 0 y 1.
 // Cada número siguiente es la suma de los dos números anteriores.
 // Los primeros números de la serie son: 2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, ...
-function lucasNumbers(limit: number): number[] { return Array.from({ length: limit }, (_, i) => i === 0 ? 2 : i === 1 ? 1 : lucasNumbers(i - 1)[0] + lucasNumbers(i - 2)[0]) }
+function lucasNumbers(limit: number): number[] {
+    // Input validation
+    if (!Number.isInteger(limit)) {
+        throw new Error('Limit must be an integer')
+    }
+    if (limit < 0) {
+        throw new Error('Limit must be non-negative')
+    }
+    
+    // Handle edge cases
+    if (limit === 0) return []
+    if (limit === 1) return [2]
+    if (limit === 2) return [2, 1]
+    
+    // Initialize the sequence with the first two Lucas numbers
+    const sequence: number[] = [2, 1]
+    
+    // Build the sequence iteratively
+    try {
+        for (let i = 2; i < limit; i++) {
+            // Check for potential overflow
+            const nextNum = sequence[i - 1] + sequence[i - 2]
+            if (!Number.isSafeInteger(nextNum)) {
+                throw new Error('Number overflow occurred')
+            }
+            sequence.push(nextNum)
+        }
+    } catch (error) {
+        if (error instanceof Error) {
+            throw new Error(`Failed to generate Lucas sequence: ${error.message}`)
+        }
+        throw error
+    }
+    
+    return sequence
+}
 
 expect(lucasNumbers(10)).toBe([2, 1, 3, 4, 7, 11, 18, 29, 47, 76])
 expect(lucasNumbers(1)).toBe([2])
@@ -260,19 +295,34 @@ expect(lucasNumbers(12)).toBe([2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199])
 expect(lucasNumbers(13)).toBe([2, 1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322])
 
 // 16. Escribir una funcion que retorne un array con los numeros de la serie de Fibonacci dado un limite, de manera que ningun numero de la serie supere este limite.
-function fibonacciLimit(limit: number): number[] { return Array.from({ length: limit }, (_, i) => i === 0 || i === 1 ? i : fibonacciLimit(i - 1)[0] + fibonacciLimit(i - 2)[0]).filter(num => num <= limit) }
+function fibonacciLimit(limit: number): number[] {
+    if (limit < 0) return []
+    if (limit < 1) return [0]
+    
+    const sequence: number[] = [0, 1]
+    
+    while (true) {
+        const nextNum = sequence[sequence.length - 1] + sequence[sequence.length - 2]
+        if (nextNum > limit) break
+        sequence.push(nextNum)
+    }
+    
+    return sequence
+}
 
 expect(fibonacciLimit(10)).toBe([0, 1, 1, 2, 3, 5, 8])
-expect(fibonacciLimit(1)).toBe([0])
-expect(fibonacciLimit(2)).toBe([0, 1])
-expect(fibonacciLimit(3)).toBe([0, 1, 1])
-expect(fibonacciLimit(4)).toBe([0, 1, 1, 2])
-expect(fibonacciLimit(5)).toBe([0, 1, 1, 2, 3])
+expect(fibonacciLimit(1)).toBe([0, 1, 1])
+expect(fibonacciLimit(2)).toBe([0, 1, 1, 2])
+expect(fibonacciLimit(3)).toBe([0, 1, 1, 2, 3])
+expect(fibonacciLimit(4)).toBe([0, 1, 1, 2, 3])
+expect(fibonacciLimit(5)).toBe([0, 1, 1, 2, 3, 5])
 expect(fibonacciLimit(6)).toBe([0, 1, 1, 2, 3, 5])
-expect(fibonacciLimit(7)).toBe([0, 1, 1, 2, 3, 5, 8])
+expect(fibonacciLimit(7)).toBe([0, 1, 1, 2, 3, 5])
 
 // 17. Escribir una funcion que calcule el numero de digitos de un numero.
 // 18. Escribir una funcion que retorne un array con los numeros primos de un array dado.
 // 19. Escribir una funcion que retorne un array con los numeros de la serie de Pell dado un limite.
 // 20. Escribir una funcion que retorne un array con los numeros de la serie de Jacobsthal dado un limite.
 // 21. Escribir una funcion que calcule el numero de segundos que hay en una cantidad determinada de meses, dias, horas, minutos y/o segundos.
+
+console.log("All tests passed!")
