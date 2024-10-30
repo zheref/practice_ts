@@ -320,6 +320,19 @@ expect(fibonacciLimit(6)).toBe([0, 1, 1, 2, 3, 5])
 expect(fibonacciLimit(7)).toBe([0, 1, 1, 2, 3, 5])
 
 // 17. Escribir una funcion que calcule el numero de digitos de un numero.
+function countDigits(num: number): number { return num < 0 ? `${num}`.length - 1 : `${num}`.length }
+
+expect(countDigits(12345)).toBe(5)
+expect(countDigits(1234567890)).toBe(10)
+expect(countDigits(0)).toBe(1)
+expect(countDigits(-12345)).toBe(5)
+expect(countDigits(1000000000000000000)).toBe(19)
+expect(countDigits(12345678901234567890)).toBe(20)
+expect(countDigits(999999999999999)).toBe(15)
+expect(countDigits(-999999999999)).toBe(12)
+expect(countDigits(123456789012345)).toBe(15)
+expect(countDigits(-1234567890)).toBe(10)
+
 // 18. Escribir una funcion que retorne un array con los numeros primos de un array dado.
 // 19. Escribir una funcion que retorne un array con los numeros de la serie de Pell dado un limite.
 // 20. Escribir una funcion que retorne un array con los numeros de la serie de Jacobsthal dado un limite.
