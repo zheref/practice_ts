@@ -127,3 +127,49 @@ const paciente = {
     }
 }
 registrarCliente(paciente)
+
+// Homework: -----------------------------------
+/**
+ * 7. Airline Reservation System
+Classes: Flight, Passenger, Ticket, Seat, Reservation
+Concepts: Composition, association, methods
+Requirements:
+Flight has Seats, and each Passenger can reserve a Seat through a Reservation.
+A Ticket class includes details like ticket number, flight, seat, and passenger.
+Reservation manages seat availability and booking processes.
+8. Hospital Management System
+Classes: Doctor, Patient, Appointment, Prescription, MedicalRecord
+Concepts: Association, composition, polymorphism
+Requirements:
+Doctor and Patient are associated via Appointments, which track consultation details.
+Each Patient has a MedicalRecord with a list of Prescriptions.
+A Doctor can issue Prescriptions, and each Appointment is associated with a specific doctor and patient.
+9. E-Learning Platform
+Classes: Course, Instructor, Student, Quiz, Lesson
+Concepts: Inheritance, encapsulation, composition
+Requirements:
+Course includes multiple Lessons and Quizes.
+Instructors create courses, while Students enroll in them and complete quizzes.
+Each Quiz has questions and an evaluation method that tracks a student’s performance.
+10. Movie Rental Store
+Classes: Movie, Customer, Rental, Payment
+Concepts: Encapsulation, polymorphism, inheritance
+Requirements:
+Movie has details like title, genre, and availability.
+Customer can rent a Movie via a Rental class, which tracks rental dates and fees.
+Payment handles transactions, and Rental can have methods for late fees.
+11. Hotel Booking System
+Classes: Hotel, Room, Customer, Booking, Payment
+Concepts: Composition, aggregation, methods
+Requirements:
+Hotel has a list of Rooms with details like type and availability.
+Customer can make a Booking, which ties a room to the customer for specific dates.
+Payment processes booking fees, and methods check room availability.
+12. Employee Management System
+Classes: Employee, Manager, Department, Project
+Concepts: Inheritance, polymorphism, aggregation
+Requirements:
+Employee is a base class with subclasses like Manager.
+Department includes a list of Employees, and Project tracks who works on what.
+Manager manages projects, and Employee can have methods for tasks.
+ */
