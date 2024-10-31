@@ -120,7 +120,7 @@ enum TipoDeCita {
     CONSULTA, EXAMEN, TRATAMIENTO
 }
 
-class ClinicaApp {
+class ClinicaApp { // controller, interactors, viewmodels, presenters
     costoDeConsulta = 90
     costoDeExamen = 120
     costoDeTratamiento = 200
