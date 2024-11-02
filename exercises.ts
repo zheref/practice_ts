@@ -35,7 +35,7 @@ function numbersSequence(step: number, limit: number): number[] {
 
 // [x] 7. Anagramas
 
-// 8. Conjuntos: Union and Intersection
+// [x] 8. Conjuntos: Union and Intersection
 
 // 9. Contando Palabras
 /*
@@ -49,18 +49,18 @@ function numbersSequence(step: number, limit: number): number[] {
 
 // Siguientes ejercicios
 
-// 10. Ordenamiento: Escribir una funcion que ordene una serie de numeros segun su valor numerico, eliminando duplicados
+// [Hacer] 10. Ordenamiento: Escribir una funcion que ordene una serie de numeros segun su valor numerico, eliminando duplicados
 
-// 11. Filtro: Escribir una funcion que filtre cualquier numero que pertenezca a la serie Fibonacci.
+// [x] 11. Filtro: Escribir una funcion que filtre cualquier numero que pertenezca a la serie Fibonacci.
 
-// 12. Filtro y ordenamiento: Escribir una funcion que dado un array de numeros, extraiga todos aquellos que sean multiplos de 7 y los ordene
+// [Completar] 12. Filtro y ordenamiento: Escribir una funcion que dado un array de numeros, extraiga todos aquellos que sean multiplos de 7 y los ordene
 // de mayor o menos, permitiendo duplicados.
 
-// 13. Escribir una funcion que ordene una serie de strings en orden alfabetico, y retorne todos aquellos que inicien con una dada subcadena.
+// 13. [Bebe] Escribir una funcion que ordene una serie de strings en orden alfabetico, y retorne todos aquellos que inicien con una dada subcadena.
 
-// 14. Escribir una funcion que invierta el orden de una cadena.
+// 14. [Bebe] Escribir una funcion que invierta el orden de una cadena.
 
-// 15. Generar todas las posibles combinaciones de letras dado un string sin repetir ningun caracter.
+// 15. [Interesante] Generar todas las posibles combinaciones de letras dado un string sin repetir ningun caracter.
 // Ejemplo: advil: avild, aildv, aldvi, ldvia
 
 // Siguiente clase
