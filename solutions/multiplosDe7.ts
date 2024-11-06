@@ -2,6 +2,7 @@ function multiplesDeSiete(numeros: number[]): number[] {
 
     const multiplosDeSiete = numeros.filter(num => num % 7 === 0);
     
+    multiplosDeSiete.sort((a, b) => b - a);
     
     return multiplosDeSiete;
 }
